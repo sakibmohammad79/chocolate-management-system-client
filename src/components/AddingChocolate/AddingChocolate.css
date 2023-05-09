@@ -1,0 +1,45 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    font-size: 1rem;
+  }
+  
+  thead tr th {
+    background-color: #efefef;
+    font-weight: bold;
+    text-align: left;
+    padding: 0.5rem;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: #f8f8f8;
+  }
+  
+  tbody td {
+    padding: 0.5rem;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  img {
+    max-width: 50px;
+    max-height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  button {
+    background-color: #f44336;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #d32f2f;
+  }
+  
