@@ -1,28 +1,22 @@
+import { Link, useLoaderData } from 'react-router-dom';
 import './AddingChocolate.css';
+import DisplayChocolate from '../DisplayChocolate';
 const AddingChocolate = () => {
+  const chocolates = useLoaderData();
     return (
-        <div className='m-20'>
-      <table>
-  <thead>
-    <tr>
-      <th>Image</th>
-      <th>Name</th>
-      <th>Country</th>
-      <th>Category</th>
-      <th>Action</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><img src="path/to/image1.jpg" alt=""/></td>
-      <td>John Doe</td>
-      <td>USA</td>
-      <td>Business</td>
-      <td><button>Edit</button><button>Delete</button></td>
-    </tr>
-  </tbody>
-</table>
-      </div>
+        <div className='p-24'>
+          <div>
+          <h2 className='text-white p-4 rounded-lg text-center bg-secondary font-extrabold w-1/4 mx-auto'>Chocolate Management System</h2>
+          <p><Link to='/addchocolate'>New Chocolate</Link></p>
+          </div>
+          <div>
+            
+            {
+              chocolates.map(chocolate => <DisplayChocolate key={chocolate._id}
+              chocolate={chocolate}></DisplayChocolate>)
+            }
+          </div>
+        </div>
     );
 };
 
